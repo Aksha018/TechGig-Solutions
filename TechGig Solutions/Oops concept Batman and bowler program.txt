@@ -1,0 +1,45 @@
+Create two classes BATSMAN and BOWLER. Both the classes havesame method name quality().
+The method quality() has the below text-
+CLASS BATSMAN
+quality() - I am BATSMAN
+CLASS BOWLER
+quality() - I am BOWLER too
+Make the object of class BOWLER.
+
+SampleInput:
+My name is Hardik Pandya
+SampleOutput:
+My name is Hardik Pandya
+I am BATSMAN
+I am BOWLER too
+----------------------------------------------------------------------------------------------------
+Solution:
+
+import java.io.*;
+import java.util.*;
+class BATSMAN{
+
+public void quality(){
+  System.out.println("I am BATSMAN");
+ }
+}
+class BOWLER extends BATSMAN{
+  String name;
+public BOWLER(String name){
+  this.name = name;
+ }
+public void quality(){
+  System.out.println("My name is "+name);
+    super.quality();
+  System.out.println("I am BOWLER too");
+ }
+}
+
+public class CandidateCode {
+public static void main(String args[] ) throws Exception {
+  Scanner sc = new Scanner(System.in);
+  String B_name = sc.nextLine();
+  BOWLER b = new BOWLER(B_name);
+    b.quality();
+ }
+}

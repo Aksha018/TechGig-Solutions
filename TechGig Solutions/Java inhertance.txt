@@ -1,0 +1,65 @@
+Java Inheritance:
+
+Create two classes:
+BaseClass
+The Rectangle class should have two data fields-width and height of int types. The class should have display()method, to print the width and height of the rectangle separated by space.
+DerivedClass 
+The RectangleArea class is derived from Rectangle class, i.e., it is the sub-class of Rectangle class. The class should have read_input() method, to read the values of width and height of the rectangle. The RectangleArea class should also overload  the display() method to print the area (width*height) of the rectangle.
+
+Input Format
+The first and only line of input contains two space separated integers denoting the width and height of the rectangle.
+
+Constraints
+1 <= width,height <= 10^3
+
+Output Format
+The output should consist of exactly two lines: 
+In the first line, print the width and height of the rectangle separated by space. 
+In the second line, print the area of the rectangle.
+Sample TestCase 1
+Input
+12 9
+Output
+12 9
+108
+------------------------------------------------
+Solution:
+
+import java.io.*;
+import java.util.*;
+public class Rectangle {
+
+    public int width, height;
+
+public Rectangle(int width, int height) {
+
+      this.width = width;
+      this.height = height;
+  }
+
+public String display(int width, int height) {
+     return (width + " " + height);
+   }
+
+public class RectangleArea extends Rectangle {
+        int area;
+
+    public RectangleArea(int width, int height) {
+         super(width, height);
+         this.area = area;
+     }
+
+           int getarea() {
+         area = width * height;
+         return area;
+       }
+   }
+ }
+
+
+public class CandidateCode{
+public static void main(String args[]) {
+     RectangleArea a = new RectangleArea(12, 9);
+        a.getarea();
+}
+}

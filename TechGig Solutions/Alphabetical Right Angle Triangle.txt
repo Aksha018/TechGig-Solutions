@@ -1,0 +1,49 @@
+You need to take an integer input and then draw the pattern according to it. Say for example if you enter 5 then, the pattern should be like this-
+A
+B B
+C C C
+D D D D
+E E E E E 
+
+Input Format
+You will take an integer input n from stdin.
+
+Constraints
+1 <= n <= 26
+
+Output Format
+Your output should be the pattern according to the input which you had entered. 
+
+Sample TestCase 1
+Input
+5
+Output
+A
+B B
+C C C
+D D D D
+E E E E E
+------------------------------------------------
+Solution:
+
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[] ) {
+
+{
+        int alphabet = 65;
+                for (int i = 0; i<= 4; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                System.out.print((char) alphabet + " ");
+            }
+            alphabet++;
+            System.out.println();
+        }
+    }
+}
+
+   }

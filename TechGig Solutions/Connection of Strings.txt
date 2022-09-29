@@ -1,0 +1,37 @@
+Connection Of Strings:
+You just need to take two strings as input and concatenate them and print the concatenated string.
+
+Input Format
+You will be given a function with two strings as arguments. 
+
+Constraints
+1 <= S1 <= 10^3
+1 <= S2 <= 10^3
+
+Output Format
+You need to return the concatenated string from the given function. 
+
+Sample TestCase 1
+Input
+Hello 
+Techgig
+Output
+HelloTechgig
+------------------------------------------------
+Solution:
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[]) {
+      
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the first string: ");
+      String str1 = sc.next();
+      System.out.println("Enter the second string: ");
+      String str2 = sc.next();
+   
+      String result = str1+str2;
+      System.out.println(result);
+   }
+}

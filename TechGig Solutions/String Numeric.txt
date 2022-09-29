@@ -1,0 +1,47 @@
+Numeric :
+You just need to take string input and checks whether the string consists of only numeric characters.
+
+Input Format
+You will be given a function with string as single argument. 
+
+Constraints
+1 <= |S| <= 10^4
+
+Output Format
+You need to return the string value either "True" or "False". 
+
+Sample TestCase 1
+Input
+this20008
+Output
+False
+
+------------------------------------------------
+Solution:
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   
+	 public static boolean onlyDigits(String str, int n)
+    {
+        
+        for (int i = 0; i < n; i++) {
+            if (str.charAt(i) < '0' || str.charAt(i) > '9') {
+                return false;
+            }
+        }
+        return true;
+    }
+ 
+  
+    public static void main(String args[])
+    {
+       
+        String str = "this20008";
+        int len = str.length();
+ 
+      
+        System.out.println(onlyDigits(str, len));
+    }
+}
