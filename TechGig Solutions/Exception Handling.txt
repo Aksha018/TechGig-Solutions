@@ -1,0 +1,73 @@
+Exception Handling:
+Create a class MyCalculator which consists of a single method long power(int, int). This method takes two integers, n and p, as parameters and finds n^p . If either n or p is negative, then the method must throw an exception which says "n or p should not be negative.". Also, if both n and p are zero, then the method must throw an exception which says "n and p should not be zero."
+
+Input Format
+Each line of the input contains two integers, n and p.
+
+Constraints
+-10 < n < 10
+-10 < p < 10
+
+Output Format
+Each line of the output contains the result , if both n and p are positive. If either n or p is negative, the output contains "n and p should be non-negative". If both n and p are zero, the output contains "n and p should not be zero.".
+
+Sample TestCase 1
+Input
+12 2
+2 10
+0 0
+2 -1
+Output
+144
+1024
+java.lang.Exception: n and p should not be zero.
+java.lang.Exception: n or p should not be negative.
+--------------------------------------------------------------------------------------------------------------------------------------
+Solution:
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+ public static void main(String args[] ) throws Exception { 
+     Scanner sc = new Scanner(System.in);
+        int count = 0; 
+ while(sc.hasNextInt()){
+      if (count==0){
+        count =1; 
+      } 
+      
+   else{
+      System.out.println();
+}
+      int n= sc.nextInt(); 
+      int p= sc.nextInt(); 
+
+if (n>-10 && p>-10 ){ 
+  myCalculator M = new myCalculator(); 
+  long res = M.power(n,p); 
+if (res != -1) { 
+System.out.print(res);
+}
+ }
+ }
+ }
+}
+class myCalculator{ 
+  public long power(int n, int p) {
+ try { 
+    if(n < 0 || p < 0){ 
+throw new Exception("n or p should not be negative."); 
+   }
+   else if (n == 0 || p == 0){ 
+throw new Exception("n and p should not be zero.");      
+}
+   else {
+return (long) Math.pow(n, p);
+} 
+}catch (Exception e)
+{ 
+System.out.print(e.toString()); 
+return -1; 
+} 
+}
+}

@@ -1,0 +1,27 @@
+Area Of A Triangle (100 Marks)
+You just need to take base and height as input from stdin and you need to find area of the triangle.
+
+Input Format
+You will be taking base and height as an input from stdin one on each line respectively.
+
+Output Format
+You need to print the area of the triangle to the stdout.
+
+Sample TestCase 1
+Input
+16
+10
+Output
+80
+-----------------------------------------------------------------------------------------------------------------------------------
+solution:
+
+public class test  
+ {  
+   public static void main (String args[])  
+    {          
+            float b=16,h =10,area ;  
+             area = ( b*h) / 2 ;  
+             System.out.println("Area of Triangle is: "+area);  
+    }
+}  

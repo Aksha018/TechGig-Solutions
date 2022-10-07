@@ -1,0 +1,75 @@
+Make three classes FIRST, SECOND and THIRD. The three classes have functions one(), two(), three() respectively. Class SECOND inherits class FIRST and CLASS THIRD inherits class SECOND.
+
+The respective methods have the following texts:
+
+one(): This is base class
+
+two(): This inherits class FIRST
+
+three(): This inherits class SECOND
+
+Make the object of class THIRD.
+
+Input Format
+NA
+
+Constraints
+NA
+
+Output Format
+Print the output in below format:
+
+This is base class.
+
+This inherits class FIRST.
+
+This inherits class SECOND.
+
+Sample TestCase 1
+Input
+NA
+Output
+This is base class.
+This inherits class FIRST.
+This inherits class SECOND.
+--------------------------------------------------------------------------------------------------------------------------------------
+Solution :
+
+import java.io.*;
+import java.util.*;
+
+class First
+{ 
+void one()
+{ 
+System.out.println("This is base class."); 
+}
+}
+class Second extends First
+{ 
+void two()
+{ 
+System.out.println("This inherits class FIRST."); 
+}
+}
+class Third extends Second
+{ 
+void three()
+{ 
+System.out.println("This inherits class SECOND."); 
+}
+}
+public class CandidateCode 
+{ 
+public static void main(String args[] ) throws Exception { 
+    Third input=new Third(); 
+       input.one(); 
+       input.two(); 
+       input.three(); 
+}
+}
+
+
+
+
+

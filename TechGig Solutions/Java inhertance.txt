@@ -27,39 +27,34 @@ Solution:
 
 import java.io.*;
 import java.util.*;
-public class Rectangle {
+import java.lang.Math;
 
-    public int width, height;
-
-public Rectangle(int width, int height) {
-
-      this.width = width;
-      this.height = height;
-  }
-
-public String display(int width, int height) {
-     return (width + " " + height);
-   }
-
-public class RectangleArea extends Rectangle {
-        int area;
-
-    public RectangleArea(int width, int height) {
-         super(width, height);
-         this.area = area;
+class Rectangle {
+     int width,height;
+void display(int w,int h ) {
+     width=w;height=h; 
+     System.out.println(width+" "+height); 
      }
+     }
+class RectangleArea extends Rectangle { 
+    void display(int w,int h) {
+     System.out.println(w); 
+     System.out.println(h); 
 
-           int getarea() {
-         area = width * height;
-         return area;
-       }
-   }
- }
-
-
-public class CandidateCode{
-public static void main(String args[]) {
-     RectangleArea a = new RectangleArea(12, 9);
-        a.getarea();
-}
-}
+    }
+    void read_input(int w,int h) {
+      width=w; height=h; 
+      super.display(width,height); 
+      this.display(width,height); 
+      } 
+      }
+      
+public class CandidateCode { 
+    public static void main(String args[] ) throws Exception {              
+       Scanner sc=new Scanner(System.in); 
+      int width=sc.nextInt(); 
+      int height=sc.nextInt(); 
+      RectangleArea r=new RectangleArea(); 
+      r.read_input(width,height); 
+      }
+    }
